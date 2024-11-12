@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Basic Scene - A-Frame</title>
+    <title>mEOW</title>
     <meta name="description" content="Basic Scene - A-Frame">
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
   </head>
@@ -10,10 +10,12 @@
       <a-assets>
         <img id="boxTexture" src="texture.jpg">
         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
-        <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
+        <img id="skyTexture" src="sky_seamless_texture_5885.jpg">
       </a-assets>
       
-     <a-sphere position="0 2 -5" rotation="0 45 45" src="#boxTexture "radius="1">
+     <a-asset-item id="cat"
+      src="cat.glb"
+      response-type="arraybuffer" crossorigin="anonymous"></a-asset-item>
         <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
           to="0 2.2 -5"></a-animation>
         <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
@@ -25,7 +27,7 @@
       <a-light type="ambient" color="#445451"></a-light>
       <a-light type="point" intensity="2" position="2 4 4"></a-light>
       <a-plane src="#groundTexture" rotation="-90 0 0" height="100" width="100"></a-plane>
-      <a-text value="I'm a fake moon!" color="#BBB" position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>
+      <a-text value="MEEEEEOOWWW!" color="#BBB" position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>
       
       <a-camera>
         <a-cursor color="#FAFAFA"></a-cursor>
